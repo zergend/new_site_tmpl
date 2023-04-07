@@ -1,0 +1,12 @@
+@import "mixins";
+@import "fonts";
+@import "vendor";
+@import "vars";
+@import "settings";
+
+@import "./components/titles";
+@import "./components/buttons";
+
+@import "./components/header";
+@import "./components/intro";
+@import "./components/footer";

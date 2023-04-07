@@ -1,0 +1,21 @@
+.title {
+  font-family: Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+
+  &--light {
+    color: $color-text-light;
+  }
+
+}
+
+.subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+
+}
