@@ -1,20 +1,10 @@
 const path = require('path');
-const fs = require('fs');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
-
-const files = {
-  header: fs.readFileSync('./src/header.html', {
-    encoding: 'utf-8',
-  }),
-  footer: fs.readFileSync('src/footer.html', {
-    encoding: 'utf-8',
-  }),
-};
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -75,9 +65,6 @@ module.exports = {
     new HTMLWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
       filename: 'index.html',
-      templateParameters: {
-        files,
-      },
       minify: {
         collapseWhitespace: isProd,
       },
